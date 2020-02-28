@@ -25,7 +25,7 @@ SECRET_KEY = 'ou8(^r-(db-%euekt@xt)c+ct10%y_i+yh9bggl$-#&on5eru7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['mogononso.herokuapp.com']
+ALLOWED_HOSTS = ['mogononso.herokuapp.com']  # 'mogononso.herokuapp.com'
 
 
 # Application definition
@@ -115,7 +115,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-# STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
 
 SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
