@@ -124,7 +124,7 @@ EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
 SENDGRID_SANDBOX_MODE_IN_DEBUG = False
 
 AWS_LOCATION = 'static'
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'website/static'),)
+# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'website/static'),)  # TODO comment out in deployment
 # STATIC_URL = '/staticfile/'
 #
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')

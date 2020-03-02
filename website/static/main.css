@@ -760,6 +760,9 @@ body {
   .progress-container .progress{
     width:47%;
   }
+  .portfolio-page .portfolio-container .testing-flex .test-one{
+    height: 30em;
+  }
 }
 
 
@@ -896,4 +899,9 @@ body {
   .form-group button{
     width:10em;
   }
+  .project-button{
+    position: absolute;
+    margin-top: 13em;
+    margin-left: 1em;
+}
 }
