@@ -12,7 +12,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-     <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
       rel="stylesheet"
@@ -34,7 +34,7 @@
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div id="flex-one-photo" style="background-image:url('{% static "website/images/intro_cropped.jpg" %}')"></div>
-         <ul>
+        <ul>
             <li><a class="scroll" href="#home">HOME</a></li>
             <li><a class="scroll" href="#about">ABOUT</a></li>
             <li><a class="scroll" href="#skills">SKILLS</a></li>
@@ -105,66 +105,20 @@
             </div>
           </div>
         </section>
-     <section class="skills-page" id="skills">
-       <div class="skills-container">
-         <h3 id="skills_heading">
-          MY SKILLS
-         </h3>
-         <p id="skills_content">
-           I gain the maximum satisfaction when I am challenged, and have the opportunity to learn new and effective technologies
-           and principles. <br>
-           At the center of my skill-set is the ability to adopt new methods and technologies to meet organisational goals and
-           customer expectations.
-         </p>
-         <div class="progress-container">
-          {% comment %} <div class="progress progress-one">
-            <p class="progress-title">HTML</p>
-            <div class="main-one">
-              <div id="id-one" class="one">
-                <div></div>
-              </div>
-            </div>
-          </div>
-          <div class="progress progress-two">
-            <p class="progress-title">CSS</p>
-            <div class="main-one">
-              <div id="id-two" class="one">
-                <div></div>
-              </div>
-            </div>
-          </div>
-          <div class="progress progress-three">
-            <p class="progress-title">JAVASCRIPT</p>
-            <div class="main-one">
-              <div id="id-three" class="one"><div></div></div>
-            </div>
-          </div>
-          <div class="progress progress-four">
-            <p class="progress-title">PYTHON</p>
-            <div class="main-one">
-              <div id="id-four" class="one"><div></div></div>
-            </div>
-          </div>
-          <div class="progress progress-five">
-            <p class="progress-title">DJANGO</p>
-            <div class="main-one">
-              <div id="id-five" class="one"><div></div></div>
-            </div>
-          </div>
-          <div class="progress progress-six">
-            <p class="progress-title">SQL</p>
-            <div class="main-one">
-              <div id="id-six" class="one"><div></div></div>
-            </div>
-          </div>
-          <div class="progress progress-seven">
-            <p class="progress-title">PROBLEM SOLVING</p>
-            <div class="main-one">
-              <div id="id-seven" class="one"><div></div></div>
-            </div>
-          </div> {% endcomment %}
+    <section class="skills-page" id="skills">
+      <div class="skills-container">
+        <h3 id="skills_heading">
+        MY SKILLS
+        </h3>
+        <p id="skills_content">
+          I gain the maximum satisfaction when I am challenged, and have the opportunity to learn new and effective technologies
+          and principles. <br>
+          At the center of my skill-set is the ability to adopt new methods and technologies to meet organisational goals and
+          customer expectations.
+        </p>
+        <div class="progress-container">
             <div id="icon-1" class="skill-icon">
-              <i class="fab fa-python"></i><p>PYTHON</p>
+              <i class="fab fa-python"></i><p>PYTHON/DJANGO</p>
             </div>
             <div id="icon-2" class="skill-icon">
               <i class="fas fa-database"></i><p>SQL</p>
@@ -172,12 +126,14 @@
             <div id="icon-3" class="skill-icon">
               <i class="fab fa-html5"></i><p>HTML</p>
             </div>
-            
-         </div>
-       </div>
-     </section>
-     <section class="education-page" id="education">
-       <div class="education-container">
+            <div id="icon-3" class="skill-icon">
+              <i class="fab fa-js-square"></i><p>JAVASCRIPT/JQUERY</p>
+            </div> 
+        </div>
+      </div>
+    </section>
+    <section class="education-page" id="education">
+      <div class="education-container">
         <h3>EDUCATION</h3>
         <button class="accordion">DIPLOMA, SOFTWARE DEVELOPMENT</button>
         <div class="panel">
@@ -211,33 +167,33 @@
         <div class="panel">
 {#          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta fugiat quibusdam delectus adipisci corporis recusandae earum dignissimos. Necessitatibus ipsum corporis delectus consectetur rerum minima in?</p>#}
         </div>
-       </div>
-     </section>
-     <section class="portfolio-page" id="portfolio">
-       <div class="portfolio-container">
-         <h3>PORTFOLIO</h3>
-         <div class="testing-flex">
-           <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
-             <a class="overlay" href="#"></a>
-               <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
-           </div>
-           <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
-             <a class="overlay" href="#"></a>
-             <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
-           </div>
-           <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
-             <a class="overlay" href="#"></a>
-               <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
-           </div>
-           <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
-             <a class="overlay" href="#"></a>
-               <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
-           </div>
-         </div>
-       </div>
+      </div>
+    </section>
+    <section class="portfolio-page" id="portfolio">
+      <div class="portfolio-container">
+        <h3>PORTFOLIO</h3>
+        <div class="testing-flex">
+          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
+            <a class="overlay" href="#"></a>
+              <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
+          </div>
+          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
+            <a class="overlay" href="#"></a>
+            <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
+          </div>
+          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
+            <a class="overlay" href="#"></a>
+              <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
+          </div>
+          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
+            <a class="overlay" href="#"></a>
+              <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
+          </div>
+        </div>
+      </div>
 
-     </section>
-     <section class="experience-page" id="experience" style="height: auto">
+    </section>
+    <section class="experience-page" id="experience" style="height: auto">
       <div class="experience-container">
         <h3>WORK EXPERIENCE</h3>
         <div class="timeline">
@@ -269,38 +225,45 @@
           </div>
         </div>
       </div>
-     </section>
-     <section class="contact-page" id="contact">
-         <div class="contact-container">
-             <div>
-                 <span class="subheader"> Get in touch</span>
-                 <h3>CONTACT</h3>
-                 <div>
-                     <form method="post" action=".">
-                         {% csrf_token %}
-                         <fieldset class="form-group">
-                             <legend class="border-bottom mb-4">Reach Out Today</legend>
-                             <div class="form-group">
-                                 <label for="email">Your Email</label>
-                                 <input class="form-control" type="email" name="from_email" id="email" required>
-                             </div>
-                             <div class="form-group">
-                                 <label for="subject">Subject</label>
-                                 <input class="form-control" type="text" name="subject" id="subject" required>
-                             </div>
-                             <div class="form-group">
-                                 <label for="message">Message</label>
-                                 <textarea class="form-control" name="message" id="message" required></textarea >
-                             </div>
-                         </fieldset>
-                         <div class="form-group">
-                                 <button class="btn btn-outline-info" type="submit">Send</button>
-                         </div>
-                     </form>
-                 </div>
-             </div>
-         </div>
-     </section>
+    </section>
+    <section class="contact-page" id="contact">
+        <div class="contact-container">
+          <div>
+              <h3>CONTACT</h3>
+            <div class="contact-icon-container">
+              <div id="contact-1" class="contact-icon">
+                <a href="https://www.linkedin.com/in/mogononso" target="_blank"><i class="fab fa-linkedin"></i></a>
+              </div>
+              <div id="contact-2" class="contact-icon">
+                <a href="https://github.com/mogopaly87" target="_blank"><i class="fab fa-github-square"></i></a>
+              </div>
+            </div>
+            <div>
+              <form method="post" action=".">
+                  {% csrf_token %}
+                  <fieldset class="form-group">
+                      <legend class="border-bottom mb-4">Reach Out Today</legend>
+                      <div class="form-group">
+                          <label for="email">Your Email</label>
+                          <input class="form-control" type="email" name="from_email" id="email" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="subject">Subject</label>
+                          <input class="form-control" type="text" name="subject" id="subject" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="message">Message</label>
+                          <textarea class="form-control" name="message" id="message" required></textarea >
+                      </div>
+                  </fieldset>
+                  <div class="form-group">
+                          <button class="btn btn-outline-info" type="submit">Send</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </section>
     </div>
         <script src="{% static 'main.js' %}"></script>
         <script src="{% static 'animation.js' %}"></script>

@@ -311,6 +311,7 @@ body {
 
 .progress-container p {
   color: #111;
+  font-weight: 500;
 }
 
 .progress-container .fa-html5 {
@@ -322,170 +323,7 @@ body {
 .progress-container .fa-database {
   color: #757575;
 }
-
-.progress-container .progress {
-  margin: 5px 0 10px 0;
-  width: 100%;
-  align-content: center;
-  position: relative;
-  display: block;
-  height: auto;
-  overflow: unset;
-  font-size: inherit;
-  background-color: unset;
-  border-radius: unset;
-}
-
-.progress-container .progress .main-one {
-  height: 0.35em;
-  width: 100%;
-  background-color: #f2f3f7;
-  position: relative;
-  margin: 0;
-  border-radius: 20px;
-}
-
-.progress-container .progress .one {
-  height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
-  margin: 0;
-  border-radius: 20px;
-  transition: 1s all ease-in-out;
-}
-
-.progress-container .progress .one div {
-  border-radius: 50%;
-  height: 0.7em;
-  width: 0.7em;
-  background: inherit;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
-}
-
-.progress:nth-child(1) .one {
-  background-color: #2c98f0;
-  width: 0%;
-}
-.progress:nth-child(2) .one {
-  background-color: #ec5453;
-  width: 0%;
-}
-.progress:nth-child(3) .one {
-  background-color: #f9bf3f;
-  width: 0%;
-}
-.progress:nth-child(4) .one {
-  background-color: #a84cb8;
-  width: 0%;
-}
-.progress:nth-child(5) .one {
-  background-color: #2fa499;
-  width: 0%;
-}
-.progress:nth-child(6) .one {
-  background-color: #4054b2;
-  width: 0%;
-}
-.progress:nth-child(7) .one {
-  background-color: #fa9372;
-  width: 0%;
-}
-
-.active {
-  transition: 1s all ease-in-out;
-}
-
-.progress:nth-child(1) .one.active {
-  width: 80%;
-}
-
-.progress:nth-child(2) .one.active {
-  width: 70%;
-}
-.progress:nth-child(3) .one.active {
-  width: 70%;
-}
-.progress:nth-child(4) .one.active {
-  width: 80%;
-}
-.progress:nth-child(5) .one.active {
-  width: 60%;
-}
-.progress:nth-child(6) .one.active {
-  width: 85%;
-}
-.progress:nth-child(7) .one.active {
-  width: 90%;
-}
-
-.progress:nth-child(1) .one.active::after,
-.progress:nth-child(2) .one.active::after,
-.progress:nth-child(3) .one.active::after,
-.progress:nth-child(4) .one.active::after,
-.progress:nth-child(5) .one.active::after,
-.progress:nth-child(6) .one.active::after,
-.progress:nth-child(7) .one.active::after {
-  opacity: 1;
-  transition: 0.5s all ease-in-out;
-  transition-delay: 1s;
-}
-
-.progress:nth-child(1) .one::after,
-.progress:nth-child(2) .one::after,
-.progress:nth-child(3) .one::after,
-.progress:nth-child(4) .one::after,
-.progress:nth-child(5) .one::after,
-.progress:nth-child(6) .one::after,
-.progress:nth-child(7) .one::after {
-  opacity: 0;
-  color: inherit;
-  position: absolute;
-  font-weight: bold;
-  font-size: 0.8em;
-  top: -2em;
-  right: 0;
-  transform: unset;
-}
-
-.progress:nth-child(1) .one::after {
-  content: "80%";
-}
-
-.progress:nth-child(2) .one::after {
-  content: "70%";
-}
-
-.progress:nth-child(3) .one::after {
-  content: "70%";
-}
-
-.progress:nth-child(4) .one::after {
-  content: "80%";
-}
-
-.progress:nth-child(5) .one::after {
-  content: "60%";
-}
-
-.progress:nth-child(6) .one::after {
-  content: "85%";
-}
-.progress:nth-child(7) .one::after {
-  content: "90%";
-}
-
-.progress-title {
-  margin: 0;
-  color: black;
-  font-size: 1em;
-  font-weight: 500;
-  padding-bottom: 0 !important;
-}
+/* skills styling ends here */
 
 .education-page {
   height: auto;
@@ -705,7 +543,7 @@ body {
     background-position: center;
   }
 }
-
+/* 
 .progress:nth-child(1) .one.active::after,
 .progress:nth-child(2) .one.active::after,
 .progress:nth-child(3) .one.active::after,
@@ -733,7 +571,7 @@ body {
   top: -2em;
   right: 0;
   transform: unset;
-}
+} */
 
 .show {
   transform: translateX(0) !important;
@@ -773,12 +611,30 @@ body {
 
 .contact-page .contact-container h3 {
   font-size: 25px;
-  margin-bottom: 2.5em;
+  margin-bottom: 1em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 
+.contact-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.fa-linkedin {
+  font-size: 3em;
+  color: #0077b5;
+  padding-right: 15px;
+}
+
+.fa-github-square {
+  font-size: 3em;
+  color: #24292e;
+}
 @media (min-width: 48em) {
   .about-page .flex-content .flex-one {
     width: 49%;
