@@ -635,6 +635,7 @@ body {
   font-size: 3em;
   color: #24292e;
 }
+
 @media (min-width: 48em) {
   .about-page .flex-content .flex-one {
     width: 49%;

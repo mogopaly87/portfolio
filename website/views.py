@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail, BadHeaderError
+from django.contrib import messages
 
 
 def index(request):
@@ -17,4 +18,4 @@ def index(request):
 
 
 def successview(request):
-    return HttpResponse('Thank you for reaching out!')
+    return render(request, 'contact_success.html')
