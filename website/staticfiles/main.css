@@ -294,33 +294,14 @@ body {
 .skills-page .skills-container p {
   padding-bottom: 2.5em;
 }
-/* skills with icons */
+
 .progress-container {
   display: flex;
   flex-wrap: wrap;
   color: dodgerblue;
   justify-content: space-between;
-  padding-left: 4em;
-  padding-right: 4em;
-  text-align: center;
-}
-
-.progress-container i {
-  font-size: 5em;
-}
-
-.progress-container p {
-  color: #111;
-}
-
-.progress-container .fa-html5 {
-  color: #f78139;
-}
-.progress-container .fa-python {
-  color: #457b9d;
-}
-.progress-container .fa-database {
-  color: #757575;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .progress-container .progress {
