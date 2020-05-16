@@ -524,7 +524,7 @@ body {
 
 .project-button {
   position: absolute;
-  margin-top: 20em;
+  margin-top: 0.8em;
   margin-left: 1em;
 }
 .project-button i {
@@ -795,15 +795,17 @@ body {
   }
   .project-button {
     position: absolute;
-    margin-top: 13em;
+    margin-top: 0.8em;
     margin-left: 1em;
   }
 }
 
 .app-name {
-  margin-top: 10em;
-  margin-left: 1em;
-  color: ghostwhite;
-  font-size: 20px;
-  font-weight: 500;
+  margin-left: 0.8em;
+  color: #fff;
+  font-family: "Squada One", cursive;
+  position: relative;
+  z-index: 1;
+  font-size: 25px;
+  margin-top: 1em;
 }
