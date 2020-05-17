@@ -809,3 +809,10 @@ body {
   font-size: 25px;
   margin-top: 1em;
 }
+
+.app-link-holder p {
+  margin-left: 1.2em;
+  color: #fff;
+  position: relative;
+  margin-bottom: 0;
+}
