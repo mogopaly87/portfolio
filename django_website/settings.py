@@ -79,8 +79,13 @@ WSGI_APPLICATION = 'django_website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = dict(default=dict(ENGINE='django.db.backends.postgresql', NAME='django-website', USER=os.environ.get('DB_USER'),
-                              PASSWORD=os.environ.get('DB_PASS'), HOST='127.0.0.1', PORT='5432'))
+# Local
+# DATABASES = dict(default=dict(ENGINE='django.db.backends.postgresql', NAME='django-website', USER=os.environ.get('DB_USER'),
+#                               PASSWORD=os.environ.get('DB_PASS'), HOST='127.0.0.1', PORT='5432'))
+
+# Production
+DATABASES = dict(default=dict(ENGINE='django.db.backends.postgresql', NAME='portfolio', USER=os.environ.get('DB_USER'),
+                              PASSWORD=os.environ.get('DB_PASS'), HOST='mogononso-1619.postgres.pythonanywhere-services.com', PORT='11619'))
 
 
 # Password validation
