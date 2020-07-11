@@ -25,10 +25,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECRET_KEY = os.environ.get('SECRET_KEY')
 
 #--- Production
-SECRET_KEY = os.getenv('SECRET_KEY_PORT')
+# SECRET_KEY = os.getenv('SECRET_KEY_PORT')
+SECRET_KEY = os.environ["SECRET_KEY_PORT"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['www.mogononsoport.ca'] # 'www.mogononsoport.ca'
 
@@ -128,7 +129,7 @@ USE_TZ = True
 STATIC_ROOT = '/home/mogononso/portfolio/portfolio/static'
 
 # Local
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
