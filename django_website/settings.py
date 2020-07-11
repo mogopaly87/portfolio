@@ -127,6 +127,7 @@ USE_TZ = True
 
 # Production
 STATIC_ROOT = '/home/mogononso/portfolio/portfolio/static'
+STATIC_URL = '/static/'
 
 # Local
 # STATIC_URL = '/static/'
