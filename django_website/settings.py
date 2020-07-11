@@ -20,12 +20,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+
+#--- Local
+# SECRET_KEY = os.environ.get('SECRET_KEY')
+
+#--- Production
+SECRET_KEY = os.getenv('SECRET_KEY_PORT')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [] # 'www.mogononsoport.ca'
+ALLOWED_HOSTS = ['www.mogononsoport.ca'] # 'www.mogononsoport.ca'
 
 
 # Application definition
@@ -114,7 +119,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# Production
+STATIC_ROOT = '/home/mogononso/portfolio/portfolio/static'
+
+# Local
 STATIC_URL = '/static/'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
