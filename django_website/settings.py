@@ -31,7 +31,7 @@ SECRET_KEY = os.environ["SECRET_KEY_PORT"]
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.mogononsoport.ca'] # 'www.mogononsoport.ca'
+ALLOWED_HOSTS = ['localhost', 'www.mogononsoport.ca'] # 'www.mogononsoport.ca'
 
 
 # Application definition
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'django_website.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 # Local
-# DATABASES = dict(default=dict(ENGINE='django.db.backends.postgresql', NAME='django-website', USER=os.environ.get('DB_USER'),
+# DATABASES = dict(default=dict(ENGINE='django.db.backends.postgresql', NAME='django_website', USER=os.environ.get('DB_USER'),
 #                               PASSWORD=os.environ.get('DB_PASS'), HOST='127.0.0.1', PORT='5432'))
 
 # Production
@@ -131,6 +131,7 @@ STATIC_URL = '/static/'
 
 # Local
 # STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -139,7 +140,5 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_USER') 
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_APP_PASS')
 
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, 'website/static'),)  # TODO comment out in deployment
-# STATIC_URL = '/staticfile/'
-#
+
 

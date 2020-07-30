@@ -48,6 +48,12 @@ body {
   margin-top: 10px;
 }
 
+.phone,
+.email{
+  margin-bottom: -0.5em;
+  font-family: "Quicksand", Arial, sans-serif;
+}
+
 .description {
   text-transform: uppercase;
   font-size: 0.8em;
@@ -524,7 +530,7 @@ body {
 
 .project-button {
   position: absolute;
-  margin-top: 20em;
+  margin-top: 0.8em;
   margin-left: 1em;
 }
 .project-button i {
@@ -795,7 +801,24 @@ body {
   }
   .project-button {
     position: absolute;
-    margin-top: 13em;
+    margin-top: 0.8em;
     margin-left: 1em;
   }
+}
+
+.app-name {
+  margin-left: 0.8em;
+  color: #fff;
+  font-family: "Squada One", cursive;
+  position: relative;
+  z-index: 1;
+  font-size: 25px;
+  margin-top: 1em;
+}
+
+.app-link-holder p {
+  margin-left: 1.2em;
+  color: #fff;
+  position: relative;
+  margin-bottom: 0;
 }

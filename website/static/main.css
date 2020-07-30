@@ -48,6 +48,12 @@ body {
   margin-top: 10px;
 }
 
+.phone,
+.email{
+  margin-bottom: -0.5em;
+  font-family: "Quicksand", Arial, sans-serif;
+}
+
 .description {
   text-transform: uppercase;
   font-size: 0.8em;
