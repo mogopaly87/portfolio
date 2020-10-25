@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'django_website.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 # Local
-# DATABASES = dict(default=dict(ENGINE='django.db.backends.postgresql', NAME='django_website', USER=os.environ.get('DB_USER'),
-#                               PASSWORD=os.environ.get('DB_PASS'), HOST='127.0.0.1', PORT='5432'))
+DATABASES = dict(default=dict(ENGINE='django.db.backends.postgresql', NAME='django_website', USER=os.environ.get('DB_USER'),
+                              PASSWORD=os.environ.get('DB_PASS'), HOST='127.0.0.1', PORT='5432'))
 
 # Production
-DATABASES = dict(default=dict(ENGINE='django.db.backends.postgresql', NAME='portfolio', USER=os.getenv('DB_USER'),
-                              PASSWORD=os.getenv('DB_PASS'), HOST='mogononso-1619.postgres.pythonanywhere-services.com', PORT='11619'))
+# DATABASES = dict(default=dict(ENGINE='django.db.backends.postgresql', NAME='portfolio', USER=os.getenv('DB_USER'),
+#                               PASSWORD=os.getenv('DB_PASS'), HOST='mogononso-1619.postgres.pythonanywhere-services.com', PORT='11619'))
 
 
 # Password validation
@@ -126,12 +126,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 # Production
-STATIC_ROOT = '/home/mogononso/portfolio/portfolio/static'
-STATIC_URL = '/static/'
+# STATIC_ROOT = '/home/mogononso/portfolio/portfolio/static'
+# STATIC_URL = '/static/'
 
 # Local
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
