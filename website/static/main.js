@@ -39,3 +39,11 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 i;
+
+$(document).ready(function(){
+  const bg = document.getElementById("home");
+  window.addEventListener('scroll', function(){
+    bg.style.backgroundSize = 160 - +window.pageYOffset/12+'%';
+  })
+})
+

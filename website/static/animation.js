@@ -22,6 +22,29 @@ $(document).ready(function() {
     .setClassToggle("#exp3", "show")
     .addTo(controller);
 
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#flexing1",
+    duration: "100%",
+    triggerHook: 0.9
+  })
+    .setClassToggle("#flexing1", "show_app")
+    .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#flexing2",
+    duration: "100%",
+    triggerHook: 0.9
+  })
+    .setClassToggle("#flexing2", "show_app")
+    .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: "#flexing3",
+    duration: "100%",
+    triggerHook: 0.9
+  })
+    .setClassToggle("#flexing3", "show_app")
+    .addTo(controller);
 
   $('.scroll').click(function(){
     $('.scroll').removeClass('active-anchor');

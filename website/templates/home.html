@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Portfolio</title>
         <link
       rel="stylesheet"
@@ -12,7 +13,7 @@
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    
     <link
       href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
       rel="stylesheet"
@@ -29,13 +30,14 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
   </head>
   <body>
     <div class="flex-container">
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div id="flex-one-photo" style="background-image:url('{% static "website/images/intro_cropped.jpg" %}')"></div>
-        <ul>
+          <div id="flex-one-photo" style="background-image:url('{% static "website/images/intro_cropped.jpg" %}')"></div>
+          <ul>
             <li><a class="scroll" href="#home">HOME</a></li>
             <li><a class="scroll" href="#about">ABOUT</a></li>
             <li><a class="scroll" href="#skills">SKILLS</a></li>
@@ -52,26 +54,25 @@
             <div id="flex-one-photo-nav" style="background-image:url('{% static "website/images/intro_cropped.jpg" %}')"></div>
         </div>
       <div class="flex-one">
-        <div id="flex-one-photo" style="background-image:url('{% static "website/images/intro_cropped.jpg" %}')"></div>
+        <div id="flex-one-photo" style="background-image:url('{% static "website/images/profile_pic.jpg" %}')"></div>
         <div id="flex-one-nav">
           <p class="name">Chinonso Mogo</p>
-          {% comment %} <p class="description">
-            <span>Full Stack Developer</span>
-          </p> {% endcomment %}
-          <p class="phone">
-            <span>709-769-8522</span>
-          </p>
-          <p class="email">
-            <span>mogononso@gmail.com</span>
-          </p>
+          <div class="contact-icon-container">
+              <div id="linkedin" class="contact-icon">
+                <a href="https://www.linkedin.com/in/mogononso" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              </div>
+              <div id="github" class="contact-icon">
+                <a href="https://github.com/mogopaly87" target="_blank"><i class="fab fa-github"></i></a>
+              </div>
+          </div>
           <ul>
-            <li><a class="scroll" href="#home">HOME</a></li>
-            <li><a class="scroll" href="#about">ABOUT</a></li>
-            <li><a class="scroll" href="#skills">SKILLS</a></li>
-            <li><a class="scroll" href="#education">EDUCATION</a></li>
-            <li><a class="scroll" href="#portfolio">PORTFOLIO</a></li>
-            <li><a class="scroll" href="#experience">EXPERIENCE</a></li>
-            <li><a class="scroll" href="#contact">CONTACT</a></li>
+            <li><a class="home" href="#home"><i class="fas fa-home sideBarIcons"></i><span>Home</span></a></li>
+            <li><a class="about" href="#about"><i class="far fa-id-badge sideBarIcons"></i><span>About</span></a></li>
+            <li><a class="skills" href="#skills"><i class="far fa-file sideBarIcons"></i><span>Skills</span></a></li>
+            <li><a class="education" href="#education"><i class="fas fa-graduation-cap sideBarIcons"></i><span>Education</span></a></li>
+            <li><a class="portfolio" href="#portfolio"><i class="fas fa-briefcase sideBarIcons"></i><span>Porfolio</span></a></li>
+            <li><a class="experience" href="#experience"><i class="fab fa-black-tie sideBarIcons"></i><span>Experience</span></a></li>
+            <li><a class="contact" href="#contact"><i class="fas fa-phone sideBarIcons"></i><span>Contact</span></a></li>
           </ul>
         </div>
       </div>
@@ -97,18 +98,18 @@
               I maintain a high level of curiosity to discover various ways of creating data-driven applications.
             </p>
           </div>
-          <div class="flex-content">
-            <div id="flexing1" class="flex-one">
+          <div id="flex-content" class="flex-content">
+            <div id="flexing1" class="flex-one right">
               <i class="fas fa-laptop-code"></i>
               <h3>Web Application</h3>
             </div>
-            <div id="flexing2" class="flex-one">
+            <div id="flexing2" class="flex-one right">
               <i class="fas fa-globe"></i>
               <h3>Web Design</h3>
             </div>
-            <div id="flexing3" class="flex-one">
+            <div id="flexing3" class="flex-one right">
               <i class="fas fa-layer-group"></i>
-              <h3>Data Analytics</h3>
+              <h3>Data Engineering</h3>
             </div>
           </div>
         </section>
@@ -127,16 +128,19 @@
         </p>
         <div class="progress-container">
             <div id="icon-1" class="skill-icon">
-              <i class="fab fa-python"></i><p>PYTHON/DJANGO</p>
+              <i class="fab fa-python"></i>
             </div>
             <div id="icon-2" class="skill-icon">
-              <i class="fas fa-database"></i><p>SQL</p>
+              <i class="fas fa-database"></i>
             </div>
             <div id="icon-3" class="skill-icon">
-              <i class="fab fa-html5"></i><p>HTML</p>
+              <i class="fab fa-html5"></i>
             </div>
-            <div id="icon-3" class="skill-icon">
-              <i class="fab fa-js-square"></i><p>JAVASCRIPT/JQUERY</p>
+            <div id="icon-4" class="skill-icon">
+              <i class="fab fa-js-square"></i>
+            </div> 
+            <div id="icon-5" class="skill-icon">
+              <i class="fab fa-css3-alt"></i>
             </div> 
         </div>
       </div>
@@ -241,15 +245,7 @@
     <section class="contact-page" id="contact">
         <div class="contact-container">
           <div>
-              <h3>CONTACT</h3>
-            <div class="contact-icon-container">
-              <div id="contact-1" class="contact-icon">
-                <a href="https://www.linkedin.com/in/mogononso" target="_blank"><i class="fab fa-linkedin"></i></a>
-              </div>
-              <div id="contact-2" class="contact-icon">
-                <a href="https://github.com/mogopaly87" target="_blank"><i class="fab fa-github-square"></i></a>
-              </div>
-            </div>
+            <h3>CONTACT</h3>
             <div>
               <form method="post" action=".">
                   {% csrf_token %}
@@ -277,9 +273,10 @@
         </div>
     </section>
     </div>
-        <script src="{% static 'main.js' %}"></script>
-        <script src="{% static 'animation.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="{% static 'main.js' %}"></script>
+    <script src="{% static 'animation.js' %}"></script>
+    
     </div>
       <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -310,6 +307,10 @@
           document.getElementById("flex-one-photo-nav").style.display = "block";
           document.body.style.backgroundColor = "white";
         }
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
