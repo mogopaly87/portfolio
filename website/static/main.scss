@@ -17,6 +17,35 @@ html {
   #contact{
     padding: 0 1em;
   }
+
+
+  // #home h3,
+  // #about h3,
+  // #skills h3,
+  // #education h3,
+  // #portfolio h3,
+  // #experience h3,
+  // #contact h3{
+  //   position: relative;
+  // }
+
+
+  // #home h3,
+  // #about h3,
+  // #skills h3,
+  // #education h3,
+  // #portfolio h3,
+  // #experience h3,
+  // #contact h3:after{
+  //   content: '';
+  //   position: absolute;
+  //   display: block;
+  //   width: 50px;
+  //   height: 3px;
+  //   background: #00B4FF;
+  //   bottom: 0;
+  //   left: 0;
+  // }
   
   .flex-container {
     display: flex;
@@ -155,8 +184,7 @@ html {
   
   #mySidenav ul li a.active-anchor,
   #mySidenav ul li a:hover,
-  .flex-one ul li a.active-anchor,
-  .flex-one ul li a:hover {
+  .flex-one ul li a.active-anchor {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgb(44, 152, 240);
@@ -166,9 +194,17 @@ html {
     transition-property: all;
   }
   
-  /* .flex-one ul li {
-    margin-top: 8px;
-  } */
+  .flex-one ul li a:hover{
+    i{
+      color: #01B0F9;
+    }
+  }
+
+  .active-nav{
+    i{
+      color: #01B0F9;
+    }
+  }
   
   .copyright {
     font-size: 0.8em;
@@ -275,7 +311,22 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
+    position: relative;
+    padding-bottom: 20px;
   }
+  
+  .about-page .content-holder .heading-two::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #00B4FF;
+    bottom: 0;
+    left: 0;
+  }
+
+
   .about-page .content-holder p {
     line-height: 1.8em;
   }
@@ -314,7 +365,7 @@ html {
     border-radius: 10px;
     margin-bottom: 1em;
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
     transition: 0.7s all ease-in-out;
   }
 
@@ -322,7 +373,7 @@ html {
     border-radius: 10px;
     margin-bottom: 1em;
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
     transition: 0.7s all ease-in-out;
   }
 
@@ -330,7 +381,7 @@ html {
     border-radius: 10px;
     margin-bottom: 1em;
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
     transition: 0.7s all ease-in-out;
   }
 
@@ -387,6 +438,18 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
+    position: relative;
+    padding-bottom: 20px;
+    &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #00B4FF;
+      bottom: 0;
+      left: 0;
+    }
   }
   .skills-page .skills-container p {
     padding-bottom: 2.5em;
@@ -437,6 +500,18 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
+    position: relative;
+    padding-bottom: 20px;
+    &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #00B4FF;
+      bottom: 0;
+      left: 0;
+    }
   }
   
   .accordion {
@@ -511,6 +586,18 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
+    padding-bottom: 20px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #00B4FF;
+      bottom: 0;
+      left: 0;
+    }
   }
   .timeline {
     position: relative;
@@ -582,6 +669,18 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
+    position: relative;
+    padding-bottom: 20px;
+    &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #00B4FF;
+      bottom: 0;
+      left: 0;
+    }
   }
   
   .portfolio-page .portfolio-container .testing-flex {
@@ -651,7 +750,18 @@ html {
     background: white;
   }
   .contact-container {
+    width: 100%;
     padding-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    .contact-form-container{
+      width: 100%;
+    }
+
+    .contact-details{
+      width: 46%;
+    }
+    
   }
   .contact-page .contact-container .subheader {
     margin-bottom: 15px;
@@ -680,6 +790,18 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 5px;
+    padding-bottom: 20px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: #00B4FF;
+      bottom: 0;
+      left: 0;
+    }
   }
   
   .contact-icon-container {
