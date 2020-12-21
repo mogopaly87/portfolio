@@ -46,5 +46,11 @@ $(document).ready(function(){
     $(".flex-one ul li a").removeClass("active-nav")
     $(this).addClass("active-nav");
   })
+  $(document).scroll(function(){
+    var scr = $("#home").scrollTop()
+    console.log(scr);
+  })
+  
+
 })
 

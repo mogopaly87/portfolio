@@ -57,14 +57,6 @@
         <div id="flex-one-photo" style="background-image:url('{% static "website/images/profile_pic.jpg" %}')"></div>
         <div id="flex-one-nav">
           <p class="name">Chinonso Mogo</p>
-          <div class="contact-icon-container">
-              <div id="linkedin" class="contact-icon">
-                <a href="https://www.linkedin.com/in/mogononso" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-              </div>
-              <div id="github" class="contact-icon">
-                <a href="https://github.com/mogopaly87" target="_blank"><i class="fab fa-github"></i></a>
-              </div>
-          </div>
           <ul>
             <li><a class="home active-nav" href="#home"><i class="fas fa-home sideBarIcons"></i><span>Home</span></a></li>
             <li><a class="about" href="#about"><i class="far fa-id-badge sideBarIcons"></i><span>About</span></a></li>
@@ -79,17 +71,31 @@
       <div class="flex-two" id="body" onscroll="myFunction()">
         <section id="home" style="background-image: url('{% static "website/images/home4.jpg" %}');">
           <div class="content-holder padding-flex-two">
-            <h1>
-              I am <br />
-              a Full Stack Developer
-            </h1>
+            <h1>I am </h1>
+            <h3 class="typing">a Full Stack Developer</h3>
+            
             <a class="button" href="#portfolio">View Portfolio<i class="fas fa-briefcase"></i></a>
+          </div>
+          <div class="contact-in-home">
+              <div class="contact-icon-container">
+                <div id="linkedin" class="contact-icon">
+                  <a href="https://www.linkedin.com/in/mogononso" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div id="github" class="contact-icon">
+                  <a href="https://github.com/mogopaly87" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+                <div id="phone-number" class="contact-icon">
+                  <a href="tel:709-769-8522"><i class="phone-number fas fa-phone "></i></a>
+                </div>
+                <div id="email" class="contact-icon">
+                  <a href="mailto:mogononso@gmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+                </div>
+              </div>
           </div>
         </section>
         <section class="about-page" id="about">
           <div class="content-holder">
-            <span class="heading-one">ABOUT ME</span>
-            <h3 class="heading-two">WHO AM I?</h3>
+            <h3 class="heading-two">ABOUT ME</h3>
             <p>
               Hi, I'm<strong> Chinonso Mogo</strong> and I am a self-taught software
               developer. My passion for solving problems using technology drives
@@ -126,7 +132,36 @@
           I have completed projects with the stack listed below:
 
         </p>
-        <div class="progress-container">
+        <div class="skills-main-section">
+          <div class="front-end">
+            <p>Front-End</p>
+            <ul>
+              <li><i class="fas fa-angle-right"></i>HTML5</li>
+              <li><i class="fas fa-angle-right"></i>CSS3</li>
+              <li><i class="fas fa-angle-right"></i>JQuery</li>
+              <li><i class="fas fa-angle-right"></i>JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="back-end">
+            <p>Back-End</p>
+            <ul>
+              <li><i class="fas fa-angle-right"></i>Python</li>
+              <li><i class="fas fa-angle-right"></i>Django Web Framework</li>
+              <li><i class="fas fa-angle-right"></i>Django</li>
+            </ul>
+          </div>
+
+          <div class="other-skils">
+            <p>Other Skills</p>
+            <ul>
+              <li><i class="fas fa-angle-right"></i>Effective Communication</li>
+              <li><i class="fas fa-angle-right"></i>Teamwork</li>
+              <li><i class="fas fa-angle-right"></i>Positive Attitude</li>
+              <li><i class="fas fa-angle-right"></i>Curiosity</li>
+            </ul>
+          </div>
+          {% comment %} <div class="skills-icon">
             <div id="icon-1" class="skill-icon">
               <i class="fab fa-python"></i>
             </div>
@@ -142,7 +177,9 @@
             <div id="icon-5" class="skill-icon">
               <i class="fab fa-css3-alt"></i>
             </div> 
+          </div> {% endcomment %}
         </div>
+        
       </div>
     </section>
     <section class="education-page" id="education">
@@ -186,25 +223,23 @@
       <div class="portfolio-container">
         <h3>PORTFOLIO</h3>
         <div class="testing-flex">
-          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
-            <a class="overlay" href="http://mogononso.pythonanywhere.com/" target="_blank"></a>
-            <div class="app-link-holder">
-            <h4 class="app-name">Church Acconting Application</h4>
-            <p>Username : demo_user</p>
-            <p>Password : demoaccount</p>
-              <a class="project-button" href="http://mogononso.pythonanywhere.com/" target="_blank">View Project<i class="fas fa-briefcase"></i></a>
+          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover;">
+            <div class="overlay" href="http://mogononso.pythonanywhere.com/" target="_blank"></div>
+            <div class="project-info">
+              <p class="project-name"><strong>Acconting Application</strong></p>
             </div>
+            <a class="project-button" href="http://mogononso.pythonanywhere.com/" target="_blank">View Project<i class="fas fa-briefcase"></i></a>
           </div>
-          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
-            <a class="overlay" href="#"></a>
+          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover;">
+            <div class="overlay" href="#"></div>
             <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
           </div>
-          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
-            <a class="overlay" href="#"></a>
+          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover;">
+            <div class="overlay" href="#"></div>
               <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
           </div>
-          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover; height: 22em; margin-top: 10px">
-            <a class="overlay" href="#"></a>
+          <div class="test-one" style="background-image:url('{% static "website/images/Pic01.jpg" %}'); background-size: cover;">
+            <div class="overlay" href="#"></div>
               <a class="project-button" href="#">View Project<i class="fas fa-briefcase"></i></a>
           </div>
         </div>
@@ -246,27 +281,22 @@
         <div class="contact-container">
           <div class="contact-form-container">
             <h3>CONTACT</h3>
-            <div>
-              <p><strong>Phone: </strong>709-769-8522</p>
-              <p><strong>Email: </strong>mogononso@gmail.com</p>
-            </div>
-            
-            <div>
+            <div class="contact-form">
               <form method="post" action=".">
                   {% csrf_token %}
                   <fieldset class="form-group">
-                      <legend class="border-bottom mb-4">Reach Out Today</legend>
+                      {% comment %} <legend class="border-bottom mb-4">Reach Out Today</legend> {% endcomment %}
                       <div class="form-group">
-                          <label for="email">Your Email</label>
-                          <input class="form-control" type="email" name="from_email" id="email" required>
+                          {% comment %} <label for="email">Your Email</label> {% endcomment %}
+                          <input class="form-control" type="email" name="from_email" id="email" placeholder='Email' required>
                       </div>
                       <div class="form-group">
-                          <label for="subject">Subject</label>
-                          <input class="form-control" type="text" name="subject" id="subject" required>
+                          {% comment %} <label for="subject">Subject</label> {% endcomment %}
+                          <input class="form-control" type="text" name="subject" id="subject" placeholder='Subject' required>
                       </div>
                       <div class="form-group">
-                          <label for="message">Message</label>
-                          <textarea class="form-control" name="message" id="message" required></textarea >
+                          {% comment %} <label for="message">Message</label> {% endcomment %}
+                          <textarea class="form-control" name="message" id="message" placeholder='Message' required></textarea >
                       </div>
                   </fieldset>
                   <div class="form-group">

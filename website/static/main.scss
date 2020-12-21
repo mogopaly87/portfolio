@@ -120,7 +120,8 @@ html {
     padding: 0 5px 0 5px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  
+    align-items: flex-start; 
+    margin-top: 30px;
   }
   
   
@@ -230,6 +231,42 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding: 0 2em;
+    position: relative;
+    margin-left: 1px;
+    .content-holder .typing{
+      line-height: 1.3em;
+      font-weight: 900;
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 2em;
+      color: ghostwhite;
+      overflow: hidden; /* Ensures the content is not revealed until the animation */
+      border-right: .15em solid orange; /* The typwriter cursor */
+      white-space: nowrap; /* Keeps the content on a single line */
+      // margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+      left: 0;
+      letter-spacing: .15em; /* Adjust as needed */
+      animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+
+      @keyframes typing{
+        from { width: 0 }
+        to { width: 100% }
+      }
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+      }
+    }
+    .contact-in-home{
+      display: flex;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      line-height: 0;
+      
+    }
   }
   
   .content-holder {
@@ -246,7 +283,7 @@ html {
   }
   .portfolio-page .portfolio-container .testing-flex .test-one .project-button,
   .button {
-    border: 1px solid ghostwhite;
+    border: 1px solid black;
     font-size: 0.8em;
     font-weight: 500;
     text-decoration: none;
@@ -256,6 +293,7 @@ html {
     border-radius: 0.5em;
     text-transform: uppercase;
     transition: 0.2s all ease-in-out;
+    // transform: translateY(90px);
   }
   
   .button:hover {
@@ -269,10 +307,10 @@ html {
     .testing-flex
     .test-one
     .project-button:hover {
-    background-color: whitesmoke;
-    color: rgba(0, 0, 0, 0.7);
-    transition: 0.3s all ease-in-out;
-    font-weight: bold;
+      background-color: whitesmoke;
+      color: rgba(0, 0, 0, 0.7);
+      transition: 0.3s all ease-in-out;
+      font-weight: bold;
   }
   
   .button i {
@@ -281,6 +319,12 @@ html {
   
   .padding-flex-two {
     padding: 0 2em;
+    p{
+      color: white;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
   }
   
   #about {
@@ -313,6 +357,8 @@ html {
     letter-spacing: 5px;
     position: relative;
     padding-bottom: 20px;
+    display: flex;
+    // justify-content: center;
   }
   
   .about-page .content-holder .heading-two::after {
@@ -323,7 +369,7 @@ html {
     height: 3px;
     background: #00B4FF;
     bottom: 0;
-    left: 0;
+    left: auto;
   }
 
 
@@ -429,6 +475,57 @@ html {
   }
   .skills-page .skills-container {
     padding-top: 2em;
+    .skills-main-section{
+      display: flex;
+      justify-content: space-between;
+      .front-end{
+        width: 33%;
+        ul {
+          padding: unset;
+        }
+      }
+      .back-end{
+        width: 33%;
+        ul {
+          padding: unset;
+        }
+      }
+      .other-skils{
+        width: 33%;
+        ul {
+          padding: unset;
+        }
+      }
+    }
+  }
+  .skills-main-section{
+    p{
+      font-weight: 600;
+    }
+    .front-end{
+      li{
+        list-style-type: none;
+        i{
+          padding-right: 5px;
+        }
+      }
+    }
+    .back-end{
+      li{
+        list-style-type: none;
+        i{
+          padding-right: 5px;
+        }
+      }
+    }
+    .other-skils{
+      li{
+        list-style-type: none;
+        i{
+          padding-right: 5px;
+        }
+      }
+    }
   }
   
   .skills-page .skills-container h3 {
@@ -440,6 +537,8 @@ html {
     letter-spacing: 5px;
     position: relative;
     padding-bottom: 20px;
+    display: flex;
+    // justify-content: center;
     &::after{
       content: '';
       position: absolute;
@@ -448,39 +547,38 @@ html {
       height: 3px;
       background: #00B4FF;
       bottom: 0;
-      left: 0;
+      left: auto;
     }
   }
-  .skills-page .skills-container p {
-    padding-bottom: 2.5em;
-  }
+  // .skills-page .skills-container p {
+  //   padding-bottom: 2.5em;
+  // }
   /* skills with icons */
-  .progress-container {
+  .skills-icon {
     display: flex;
     flex-wrap: wrap;
     color: dodgerblue;
     justify-content: space-between;
-    padding-left: 4em;
-    padding-right: 4em;
     text-align: center;
+    align-items: flex-start;
   }
   
-  .progress-container i {
-    font-size: 5em;
+  .skills-icon i {
+    font-size: 3em;
   }
   
-  .progress-container p {
+  .skills-icon p {
     color: #111;
     font-weight: 500;
   }
   
-  .progress-container .fa-html5 {
+  .skills-icon .fa-html5 {
     color: #f78139;
   }
-  .progress-container .fa-python {
+  .skills-icon .fa-python {
     color: #457b9d;
   }
-  .progress-container .fa-database {
+  .skills-icon .fa-database {
     color: #757575;
   }
   /* skills styling ends here */
@@ -502,6 +600,8 @@ html {
     letter-spacing: 5px;
     position: relative;
     padding-bottom: 20px;
+    display: flex;
+    // justify-content: center;
     &::after{
       content: '';
       position: absolute;
@@ -510,7 +610,7 @@ html {
       height: 3px;
       background: #00B4FF;
       bottom: 0;
-      left: 0;
+      left: auto;
     }
   }
   
@@ -588,6 +688,8 @@ html {
     letter-spacing: 5px;
     padding-bottom: 20px;
     position: relative;
+    display: flex;
+    // justify-content: center;
     &::after{
       content: '';
       position: absolute;
@@ -596,7 +698,7 @@ html {
       height: 3px;
       background: #00B4FF;
       bottom: 0;
-      left: 0;
+      left: auto;
     }
   }
   .timeline {
@@ -671,6 +773,8 @@ html {
     letter-spacing: 5px;
     position: relative;
     padding-bottom: 20px;
+    display: flex;
+    // justify-content: center;
     &::after{
       content: '';
       position: absolute;
@@ -679,7 +783,7 @@ html {
       height: 3px;
       background: #00B4FF;
       bottom: 0;
-      left: 0;
+      left: auto;
     }
   }
   
@@ -694,18 +798,58 @@ html {
   .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(2),
   .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(3),
   .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(4) {
-    width: 48%;
+    width: 33.3%;
     height: auto;
     background-position: center;
-    margin-top: 2em;
     position: relative;
+    height: 18em;
+    margin-top: 1px;
+    .project-info{
+      position: absolute;
+      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // visibility: hidden;
+      transition: 0.5s all ease-in-out;
+      .project-name{
+        text-align: center;
+      }
+    }
+    .project-button{
+      position: absolute;
+      bottom: 0%;
+      left: 50%;
+      visibility: hidden;
+      transform: translate(-50%, 0%);
+      transition: 0.5s all ease-in-out;
+      & i{
+        padding-left: 8px;
+      }
+    }
   }
+
+  .portfolio-page .portfolio-container .testing-flex .test-one:hover{
+    .project-info{
+      visibility: hidden;
+      top: 10%;
+      left: 50%;
+      transition: 0.5s all ease-in-out;
+    }
+    .project-button{
+      bottom: 50%;
+      transform: translate(-50%, 50%);
+      visibility: visible;
+      transition: 0.5s all ease-in-out;
+    }
+  }
+
   .portfolio-page .portfolio-container .testing-flex .test-one .overlay:hover {
     background-color: rgba(171, 206, 89, 0.4);
     transition: 0.3s all ease-in-out;
   }
   
-  .portfolio-page .portfolio-container .testing-flex .test-one a.overlay {
+  .portfolio-page .portfolio-container .testing-flex .test-one div.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -715,14 +859,7 @@ html {
     transition: 0.5s all ease-in-out;
   }
   
-  .project-button {
-    position: absolute;
-    margin-top: 0.8em;
-    margin-left: 1em;
-  }
-  .project-button i {
-    padding-left: 8px;
-  }
+  
   
   .portfolio-page .portfolio-container .port-flex {@media (max-width: 60em) {
     .portfolio-page .portfolio-container .port-flex .flex:nth-child(1),
@@ -806,20 +943,24 @@ html {
   
   .contact-icon-container {
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     text-align: center;
-    margin: 1em 0;
+    margin: 5px 0 16px 0;
   }
   
   .contact-icon-container a:hover{
     text-decoration: none;
   }
   
-  #linkedin{
+  #linkedin,
+  #github,
+  #phone-number{
     margin-right: 15px;
   }
-  .fa-linkedin-in {
+  .fa-linkedin-in,
+  .phone-number,
+  .fa-envelope,
+  .fa-github {
     color: white;
     background: #212431;
     width: 40px;
@@ -832,35 +973,38 @@ html {
     border-radius: 50%;
     transition: background 0.3s
   }
-  .fa-linkedin-in:hover {
+  .fa-linkedin-in:hover,
+  .fa-github:hover,
+  .phone-number:hover,
+  .fa-envelope:hover {
     background: #00B4FF;
     transition: background 0.3s;
   }
   
-  .fa-github {
-    color: white;
-    background: #212431;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    height: 40px;
-    align-items: center;
-    vertical-align: middle;
-    text-align: center;
-    border-radius: 50%;
-    transition: background 0.3s;
-  }
+  // .fa-github {
+  //   color: white;
+  //   background: #212431;
+  //   width: 40px;
+  //   display: flex;
+  //   justify-content: center;
+  //   height: 40px;
+  //   align-items: center;
+  //   vertical-align: middle;
+  //   text-align: center;
+  //   border-radius: 50%;
+  //   transition: background 0.3s;
+  // }
   
-  .fa-github:hover{
-    background: #00B4FF;
-    transition: background 0.3s;
-  }
+  // .fa-github:hover{
+  //   background: #00B4FF;
+  //   transition: background 0.3s;
+  // }
   
   @media (min-width: 48em) {
     .about-page .flex-content .flex-one {
       width: 49%;
     }
-    .progress-container .progress {
+    .skills-icon .progress {
       width: 100%;
     }
   }
@@ -868,7 +1012,7 @@ html {
     .about-page .flex-content .flex-one {
       width: 30%;
     }
-    .progress-container .progress {
+    .skills-icon .progress {
       width: 47%;
     }
     .portfolio-page .portfolio-container .testing-flex .test-one {
@@ -1020,20 +1164,30 @@ html {
     }
   }
   
-  .app-name {
-    margin-left: 0.8em;
-    color: #fff;
-    font-family: "Squada One", cursive;
-    position: relative;
-    z-index: 1;
-    font-size: 25px;
-    margin-top: 1em;
-  }
+  // .app-name {
+  //   margin-left: 0.8em;
+  //   color: #fff;
+  //   font-family: "Squada One", cursive;
+  //   position: relative;
+  //   z-index: 1;
+  //   font-size: 25px;
+  //   margin-top: 1em;
+  // }
   
-  .app-link-holder p {
-    margin-left: 1.2em;
-    color: #fff;
-    position: relative;
-    margin-bottom: 0;
-  }
+  // .app-link-holder{
+  //   position: absolute;
+  //   transform: translateY(-200px);
+    
+  // }
+
+  // .show-app-detail{
+  //   transform: translateY(0);
+  // }
+
+  // .app-link-holder p {
+  //   margin-left: 1.2em;
+  //   color: #fff;
+  //   position: relative;
+  //   margin-bottom: 0;
+  // }
   
