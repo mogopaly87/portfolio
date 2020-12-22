@@ -542,7 +542,7 @@ body {
 }
 
 .skills-page .skills-container .skills-main-section .front-end {
-  width: 33%;
+  width: 25%;
 }
 
 .skills-page .skills-container .skills-main-section .front-end ul {
@@ -550,18 +550,26 @@ body {
 }
 
 .skills-page .skills-container .skills-main-section .back-end {
-  width: 33%;
+  width: 25%;
 }
 
 .skills-page .skills-container .skills-main-section .back-end ul {
   padding: unset;
 }
 
-.skills-page .skills-container .skills-main-section .other-skils {
-  width: 33%;
+.skills-page .skills-container .skills-main-section .utility-skills {
+  width: 25%;
 }
 
-.skills-page .skills-container .skills-main-section .other-skils ul {
+.skills-page .skills-container .skills-main-section .utility-skills ul {
+  padding: unset;
+}
+
+.skills-page .skills-container .skills-main-section .other-skills {
+  width: 25%;
+}
+
+.skills-page .skills-container .skills-main-section .other-skills ul {
   padding: unset;
 }
 
@@ -585,11 +593,19 @@ body {
   padding-right: 5px;
 }
 
-.skills-main-section .other-skils li {
+.skills-main-section .utility-skills li {
   list-style-type: none;
 }
 
-.skills-main-section .other-skils li i {
+.skills-main-section .utility-skills li i {
+  padding-right: 5px;
+}
+
+.skills-main-section .other-skills li {
+  list-style-type: none;
+}
+
+.skills-main-section .other-skills li i {
   padding-right: 5px;
 }
 

@@ -479,19 +479,25 @@ html {
       display: flex;
       justify-content: space-between;
       .front-end{
-        width: 33%;
+        width: 25%;
         ul {
           padding: unset;
         }
       }
       .back-end{
-        width: 33%;
+        width: 25%;
         ul {
           padding: unset;
         }
       }
-      .other-skils{
-        width: 33%;
+      .utility-skills{
+        width: 25%;
+        ul {
+          padding: unset;
+        }
+      }
+      .other-skills{
+        width: 25%;
         ul {
           padding: unset;
         }
@@ -518,7 +524,15 @@ html {
         }
       }
     }
-    .other-skils{
+    .utility-skills{
+      li{
+        list-style-type: none;
+        i{
+          padding-right: 5px;
+        }
+      }
+    }
+    .other-skills{
       li{
         list-style-type: none;
         i{

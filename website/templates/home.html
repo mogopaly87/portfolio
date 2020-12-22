@@ -58,20 +58,20 @@
         <div id="flex-one-nav">
           <p class="name">Chinonso Mogo</p>
           <ul>
-            <li><a class="home active-nav" href="#home"><i class="fas fa-home sideBarIcons"></i><span>Home</span></a></li>
-            <li><a class="about" href="#about"><i class="far fa-id-badge sideBarIcons"></i><span>About</span></a></li>
-            <li><a class="skills" href="#skills"><i class="far fa-file sideBarIcons"></i><span>Skills</span></a></li>
-            <li><a class="education" href="#education"><i class="fas fa-graduation-cap sideBarIcons"></i><span>Education</span></a></li>
-            <li><a class="portfolio" href="#portfolio"><i class="fas fa-briefcase sideBarIcons"></i><span>Porfolio</span></a></li>
-            <li><a class="experience" href="#experience"><i class="fab fa-black-tie sideBarIcons"></i><span>Experience</span></a></li>
-            <li><a class="contact" href="#contact"><i class="fas fa-phone sideBarIcons"></i><span>Contact</span></a></li>
+            <li><a id="home-nav" class="home active-nav" href="#home"><i class="fas fa-home sideBarIcons"></i><span>Home</span></a></li>
+            <li><a id="about-nav"class="about" href="#about"><i class="far fa-id-badge sideBarIcons"></i><span>About</span></a></li>
+            <li><a id="skills-nav" class="skills" href="#skills"><i class="far fa-file sideBarIcons"></i><span>Skills</span></a></li>
+            <li><a id="education-nav" class="education" href="#education"><i class="fas fa-graduation-cap sideBarIcons"></i><span>Education</span></a></li>
+            <li><a id="portfolio-nav" class="portfolio" href="#portfolio"><i class="fas fa-briefcase sideBarIcons"></i><span>Porfolio</span></a></li>
+            <li><a id="experience-nav" class="experience" href="#experience"><i class="fab fa-black-tie sideBarIcons"></i><span>Experience</span></a></li>
+            <li><a id="contact-nav" class="contact" href="#contact"><i class="fas fa-phone sideBarIcons"></i><span>Contact</span></a></li>
           </ul>
         </div>
       </div>
-      <div class="flex-two" id="body" onscroll="myFunction()">
+      <div class="flex-two" id="body">
         <section id="home" style="background-image: url('{% static "website/images/home4.jpg" %}');">
           <div class="content-holder padding-flex-two">
-            <h1>I am </h1>
+            <h1>I'm </h1>
             <h3 class="typing">a Full Stack Developer</h3>
             
             <a class="button" href="#portfolio">View Portfolio<i class="fas fa-briefcase"></i></a>
@@ -129,7 +129,7 @@
           and principles. <br>
           At the center of my skill-set is the ability to adopt new methods and technologies to meet organisational goals and
           customer expectations. <br>
-          I have completed projects with the stack listed below:
+          I have completed projects with the tools listed below:
 
         </p>
         <div class="skills-main-section">
@@ -148,11 +148,18 @@
             <ul>
               <li><i class="fas fa-angle-right"></i>Python</li>
               <li><i class="fas fa-angle-right"></i>Django Web Framework</li>
-              <li><i class="fas fa-angle-right"></i>Django</li>
+              <li><i class="fas fa-angle-right"></i>REST API</li>
             </ul>
           </div>
 
-          <div class="other-skils">
+          <div class="utility-skills">
+            <p>Utility</p>
+            <ul>
+              <li><i class="fas fa-angle-right"></i>Git/GitHub</li>
+              <li><i class="fas fa-angle-right"></i>Windows & Ubuntu</li>
+            </ul>
+          </div>
+          <div class="other-skills">
             <p>Other Skills</p>
             <ul>
               <li><i class="fas fa-angle-right"></i>Effective Communication</li>
@@ -161,23 +168,6 @@
               <li><i class="fas fa-angle-right"></i>Curiosity</li>
             </ul>
           </div>
-          {% comment %} <div class="skills-icon">
-            <div id="icon-1" class="skill-icon">
-              <i class="fab fa-python"></i>
-            </div>
-            <div id="icon-2" class="skill-icon">
-              <i class="fas fa-database"></i>
-            </div>
-            <div id="icon-3" class="skill-icon">
-              <i class="fab fa-html5"></i>
-            </div>
-            <div id="icon-4" class="skill-icon">
-              <i class="fab fa-js-square"></i>
-            </div> 
-            <div id="icon-5" class="skill-icon">
-              <i class="fab fa-css3-alt"></i>
-            </div> 
-          </div> {% endcomment %}
         </div>
         
       </div>
@@ -208,10 +198,6 @@
                 <li>Power Pivot</li>
               </ul>
           </p>
-        </div>
-        <button class="accordion">MASTERS, ENVIRONMENTAL SYSTEMS ENGINEERING & MANAGEMENT</button>
-        <div class="panel">
-          <p>This program focused on optimizing environmental engineering systems</p>
         </div>
         <button class="accordion">BACHELORS, ENVIRONMENTAL TECHNOLOGY</button>
         <div class="panel">

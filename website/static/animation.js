@@ -50,4 +50,64 @@ $(document).ready(function() {
     $('.scroll').removeClass('active-anchor');
     $(this).addClass('active-anchor');
   });
+
+  // Change active side nav on scroll from page to page
+  new ScrollMagic.Scene({
+    triggerElement: "#home",
+    duration: "100%",
+    triggerHook: 0.8
+  })
+    .setClassToggle("#home-nav", "active-nav")
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#about",
+    duration: "100%",
+    triggerHook: 0.8
+  })
+    .setClassToggle("#about-nav", "active-nav")
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#skills",
+    duration: "100%",
+    triggerHook: 0.8
+  })
+    .setClassToggle("#skills-nav", "active-nav")
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#education",
+    duration: "100%",
+    triggerHook: 0.8
+  })
+    .setClassToggle("#education-nav", "active-nav")
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#portfolio",
+    duration: "100%",
+    triggerHook: 0.8
+  })
+    .setClassToggle("#portfolio-nav", "active-nav")
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#experience",
+    duration: "100%",
+    triggerHook: 0.8
+  })
+    .setClassToggle("#experience-nav", "active-nav")
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+    triggerElement: "#contact",
+    duration: "100%",
+    triggerHook: 0.8
+  })
+    .setClassToggle("#contact-nav", "active-nav")
+    .addTo(controller);
+  
+  let triggerPosition = scene.triggerPosition();
+  console.log(triggerPosition);
 });
