@@ -262,10 +262,12 @@ html {
     .contact-in-home{
       display: flex;
       position: absolute;
-      top: 10px;
-      right: 10px;
-      line-height: 0;
-      
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+      margin-right: 20px;
+      position: fixed;
+      z-index: 20;
     }
   }
   
@@ -478,6 +480,7 @@ html {
     .skills-main-section{
       display: flex;
       justify-content: space-between;
+      padding: 0 10px;
       .front-end{
         width: 25%;
         ul {
@@ -957,9 +960,9 @@ html {
   
   .contact-icon-container {
     display: flex;
-    justify-content: center;
     text-align: center;
     margin: 5px 0 16px 0;
+    flex-direction: column;
   }
   
   .contact-icon-container a:hover{
@@ -969,7 +972,7 @@ html {
   #linkedin,
   #github,
   #phone-number{
-    margin-right: 15px;
+    margin-bottom: 5px;
   }
   .fa-linkedin-in,
   .phone-number,
@@ -994,25 +997,66 @@ html {
     background: #00B4FF;
     transition: background 0.3s;
   }
+
+  #email {
+    position: relative;
+    &:hover .email-tooltip{
+      visibility: visible;
+      transition: opacity 0.5s ease-in-out;
+    }
+  }
+
   
-  // .fa-github {
-  //   color: white;
-  //   background: #212431;
-  //   width: 40px;
-  //   display: flex;
-  //   justify-content: center;
-  //   height: 40px;
-  //   align-items: center;
-  //   vertical-align: middle;
-  //   text-align: center;
-  //   border-radius: 50%;
-  //   transition: background 0.3s;
-  // }
   
-  // .fa-github:hover{
-  //   background: #00B4FF;
-  //   transition: background 0.3s;
-  // }
+  #email .email-tooltip{
+    visibility: hidden;
+    background-color: #4C4C4C;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    word-wrap: break-word;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    line-height: 1.5;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: -480%;
+    transform: translate(0, -0%);
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  #phone-number {
+    position: relative;
+    &:hover .phone-tooltip{
+      visibility: visible;
+      transition: opacity 0.5s ease-in-out;
+    }
+  }
+
+  
+  
+  #phone-number .phone-tooltip{
+    visibility: hidden;
+    background-color: #4C4C4C;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    word-wrap: break-word;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    line-height: 1.5;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: -280%;
+    transform: translate(0, -0%);
+    transition: opacity 0.5s ease-in-out;
+  }
   
   @media (min-width: 48em) {
     .about-page .flex-content .flex-one {
