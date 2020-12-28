@@ -18,34 +18,9 @@ html {
     padding: 0 1em;
   }
 
-
-  // #home h3,
-  // #about h3,
-  // #skills h3,
-  // #education h3,
-  // #portfolio h3,
-  // #experience h3,
-  // #contact h3{
-  //   position: relative;
-  // }
-
-
-  // #home h3,
-  // #about h3,
-  // #skills h3,
-  // #education h3,
-  // #portfolio h3,
-  // #experience h3,
-  // #contact h3:after{
-  //   content: '';
-  //   position: absolute;
-  //   display: block;
-  //   width: 50px;
-  //   height: 3px;
-  //   background: #00B4FF;
-  //   bottom: 0;
-  //   left: 0;
-  // }
+  #contact{
+    margin-bottom: 4em;
+  }
   
   .flex-container {
     display: flex;
@@ -124,32 +99,39 @@ html {
     margin-top: 30px;
   }
   
-  
+  #mySidenav ul .sideBarIcons,
   .flex-one ul .sideBarIcons{
     font-size: 24px;
     padding-right: 8px;
   }
   
   
-  .flex-one ul .home .sideBarIcons{
+  .flex-one ul .home .sideBarIcons,
+  #mySidenav ul .home .sideBarIcons{
     padding-right: 15px;
   }
-  .flex-one ul .about .sideBarIcons{
+  .flex-one ul .about .sideBarIcons,
+  #mySidenav ul .about .sideBarIcons{
     padding-right: 23px;
   }
-  .flex-one ul .skills .sideBarIcons{
+  .flex-one ul .skills .sideBarIcons,
+  #mySidenav ul .skills .sideBarIcons{
     padding-right: 23px;
   }
-  .flex-one ul .education .sideBarIcons{
+  .flex-one ul .education .sideBarIcons,
+  #mySidenav ul .education .sideBarIcons{
     padding-right: 11px;
   }
-  .flex-one ul .portfolio .sideBarIcons{
+  .flex-one ul .portfolio .sideBarIcons,
+  #mySidenav ul .portfolio .sideBarIcons{
     padding-right: 17px;
   }
-  .flex-one ul .experience .sideBarIcons{
+  .flex-one ul .experience .sideBarIcons,
+  #mySidenav ul .experience .sideBarIcons{
     padding-right: 20px;
   }
-  .flex-one ul .contact .sideBarIcons{
+  .flex-one ul .contact .sideBarIcons,
+  #mySidenav ul .contact .sideBarIcons{
     padding-right: 18px;
   }
   
@@ -183,17 +165,17 @@ html {
     color: rgb(44, 152, 240);
   }
   
-  #mySidenav ul li a.active-anchor,
-  #mySidenav ul li a:hover,
-  .flex-one ul li a.active-anchor {
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: rgb(44, 152, 240);
-    /* transition-duration: 0.2s; */
-    transition: 0.2s;
-    transition-timing-function: ease-in-out;
-    transition-property: all;
-  }
+  // #mySidenav ul li a.active-anchor,
+  // #mySidenav ul li a:hover,
+  // .flex-one ul li a.active-anchor {
+  //   border-bottom-width: 1px;
+  //   border-bottom-style: solid;
+  //   border-bottom-color: rgb(44, 152, 240);
+  //   /* transition-duration: 0.2s; */
+  //   transition: 0.2s;
+  //   transition-timing-function: ease-in-out;
+  //   transition-property: all;
+  // }
   
   .flex-one ul li a:hover{
     i{
@@ -269,6 +251,34 @@ html {
       position: fixed;
       z-index: 20;
     }
+    .mobile-contact{
+      visibility: hidden;
+    }
+  }
+
+  @media only screen and (max-width: 992px){
+    .contact-in-home{
+      visibility: hidden;
+    }
+    #home .mobile-contact{
+      visibility: visible;
+      margin-top: 15px;
+      p{
+        margin: unset;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 485px){
+    .content-holder .typing{
+      font-size: 1.4em !important;
+    }
+  }
+
+  @media only screen and (max-width: 320px){
+    .content-holder .typing{
+      font-size: 1em !important;
+    }
   }
   
   .content-holder {
@@ -329,6 +339,12 @@ html {
     }
   }
   
+  @media only screen and (max-width:992px){
+    .padding-flex-two{
+      padding: unset;
+    }
+  }
+
   #about {
     height: auto;
     width: 100%;
@@ -470,6 +486,9 @@ html {
     font-weight: 400;
   }
   
+
+  // Skills page 
+
   .skills-page {
     height: auto;
     width: 100%;
@@ -544,6 +563,20 @@ html {
       }
     }
   }
+
+  @media (max-width:600px){
+    .skills-page .skills-container .skills-main-section{
+      flex-wrap: wrap;
+      justify-content: center;
+
+      div:nth-child(1),
+      div:nth-child(2),
+      div:nth-child(3),
+      div:nth-child(4){
+        width: 48%;
+      }
+    }
+  }
   
   .skills-page .skills-container h3 {
     font-size: 25px;
@@ -567,9 +600,7 @@ html {
       left: auto;
     }
   }
-  // .skills-page .skills-container p {
-  //   padding-bottom: 2.5em;
-  // }
+
   /* skills with icons */
   .skills-icon {
     display: flex;
@@ -598,7 +629,9 @@ html {
   .skills-icon .fa-database {
     color: #757575;
   }
-  /* skills styling ends here */
+
+
+// Education page
   
   .education-page {
     height: auto;
@@ -618,7 +651,6 @@ html {
     position: relative;
     padding-bottom: 20px;
     display: flex;
-    // justify-content: center;
     &::after{
       content: '';
       position: absolute;
@@ -1139,7 +1171,7 @@ html {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    margin-bottom: 2em;
+    margin-bottom: 0.5em;
     background-size: cover;
     background-position: center;
   }
@@ -1181,13 +1213,13 @@ html {
       display: flex;
       justify-content: space-between;
       padding: 0.6em 1em;
-      background-color: #17a2b8;
+      background-color: #01B0F9;
     }
     .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(1),
     .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(2),
     .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(3),
     .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(4) {
-      width: 100%;
+      width: 49.8%;
       height: 15em !important;
     }
     .time-container {
@@ -1215,37 +1247,14 @@ html {
     .form-group button {
       width: 10em;
     }
-    .project-button {
-      position: absolute;
-      margin-top: 0.8em;
-      margin-left: 1em;
+  }
+
+  @media only screen and (max-width: 600px){
+    .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(1),
+    .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(2),
+    .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(3),
+    .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(4) {
+      width: 100%;
+      height: 15em !important;
     }
   }
-  
-  // .app-name {
-  //   margin-left: 0.8em;
-  //   color: #fff;
-  //   font-family: "Squada One", cursive;
-  //   position: relative;
-  //   z-index: 1;
-  //   font-size: 25px;
-  //   margin-top: 1em;
-  // }
-  
-  // .app-link-holder{
-  //   position: absolute;
-  //   transform: translateY(-200px);
-    
-  // }
-
-  // .show-app-detail{
-  //   transform: translateY(0);
-  // }
-
-  // .app-link-holder p {
-  //   margin-left: 1.2em;
-  //   color: #fff;
-  //   position: relative;
-  //   margin-bottom: 0;
-  // }
-  

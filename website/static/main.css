@@ -19,6 +19,10 @@ body {
   padding: 0 1em;
 }
 
+#contact {
+  margin-bottom: 4em;
+}
+
 .flex-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -111,36 +115,44 @@ body {
   margin-top: 30px;
 }
 
+#mySidenav ul .sideBarIcons,
 .flex-one ul .sideBarIcons {
   font-size: 24px;
   padding-right: 8px;
 }
 
-.flex-one ul .home .sideBarIcons {
+.flex-one ul .home .sideBarIcons,
+#mySidenav ul .home .sideBarIcons {
   padding-right: 15px;
 }
 
-.flex-one ul .about .sideBarIcons {
+.flex-one ul .about .sideBarIcons,
+#mySidenav ul .about .sideBarIcons {
   padding-right: 23px;
 }
 
-.flex-one ul .skills .sideBarIcons {
+.flex-one ul .skills .sideBarIcons,
+#mySidenav ul .skills .sideBarIcons {
   padding-right: 23px;
 }
 
-.flex-one ul .education .sideBarIcons {
+.flex-one ul .education .sideBarIcons,
+#mySidenav ul .education .sideBarIcons {
   padding-right: 11px;
 }
 
-.flex-one ul .portfolio .sideBarIcons {
+.flex-one ul .portfolio .sideBarIcons,
+#mySidenav ul .portfolio .sideBarIcons {
   padding-right: 17px;
 }
 
-.flex-one ul .experience .sideBarIcons {
+.flex-one ul .experience .sideBarIcons,
+#mySidenav ul .experience .sideBarIcons {
   padding-right: 20px;
 }
 
-.flex-one ul .contact .sideBarIcons {
+.flex-one ul .contact .sideBarIcons,
+#mySidenav ul .contact .sideBarIcons {
   padding-right: 18px;
 }
 
@@ -180,21 +192,6 @@ body {
 #mySidenav ul li a.active-anchor,
 .flex-one ul li a.active-anchor {
   color: #2c98f0;
-}
-
-#mySidenav ul li a.active-anchor,
-#mySidenav ul li a:hover,
-.flex-one ul li a.active-anchor {
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #2c98f0;
-  /* transition-duration: 0.2s; */
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-  -webkit-transition-property: all;
-  transition-property: all;
 }
 
 .flex-one ul li a:hover i {
@@ -302,6 +299,35 @@ body {
   z-index: 20;
 }
 
+#home .mobile-contact {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 992px) {
+  .contact-in-home {
+    visibility: hidden;
+  }
+  #home .mobile-contact {
+    visibility: visible;
+    margin-top: 15px;
+  }
+  #home .mobile-contact p {
+    margin: unset;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .content-holder .typing {
+    font-size: 1.4em !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .content-holder .typing {
+    font-size: 1em !important;
+  }
+}
+
 .content-holder {
   display: inline-block;
   vertical-align: middle;
@@ -364,6 +390,12 @@ body {
   font-size: 15px;
   font-weight: 600;
   letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 992px) {
+  .padding-flex-two {
+    padding: unset;
+  }
 }
 
 #about {
@@ -614,6 +646,22 @@ body {
   padding-right: 5px;
 }
 
+@media (max-width: 600px) {
+  .skills-page .skills-container .skills-main-section {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .skills-page .skills-container .skills-main-section div:nth-child(1),
+  .skills-page .skills-container .skills-main-section div:nth-child(2),
+  .skills-page .skills-container .skills-main-section div:nth-child(3),
+  .skills-page .skills-container .skills-main-section div:nth-child(4) {
+    width: 48%;
+  }
+}
+
 .skills-page .skills-container h3 {
   font-size: 25px;
   margin-top: 2em;
@@ -677,7 +725,6 @@ body {
   color: #757575;
 }
 
-/* skills styling ends here */
 .education-page {
   height: auto;
   width: 100%;
@@ -1309,7 +1356,7 @@ body {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  margin-bottom: 2em;
+  margin-bottom: 0.5em;
   background-size: cover;
   background-position: center;
 }
@@ -1356,13 +1403,13 @@ body {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0.6em 1em;
-    background-color: #17a2b8;
+    background-color: #01B0F9;
   }
   .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(1),
   .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(2),
   .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(3),
   .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(4) {
-    width: 100%;
+    width: 49.8%;
     height: 15em !important;
   }
   .time-container {
@@ -1392,10 +1439,15 @@ body {
   .form-group button {
     width: 10em;
   }
-  .project-button {
-    position: absolute;
-    margin-top: 0.8em;
-    margin-left: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(1),
+  .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(2),
+  .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(3),
+  .portfolio-page .portfolio-container .testing-flex .test-one:nth-child(4) {
+    width: 100%;
+    height: 15em !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

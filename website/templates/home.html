@@ -36,22 +36,22 @@
     <div class="flex-container">
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <div id="flex-one-photo" style="background-image:url('{% static "website/images/intro_cropped.jpg" %}')"></div>
+          <div id="flex-one-photo" style="background-image:url('{% static "website/images/profile_pic.jpg" %}')"></div>
           <ul>
-            <li><a class="scroll" href="#home">HOME</a></li>
-            <li><a class="scroll" href="#about">ABOUT</a></li>
-            <li><a class="scroll" href="#skills">SKILLS</a></li>
-            <li><a class="scroll" href="#education">EDUCATION</a></li>
-            <li><a class="scroll" href="#portfolio">PORTFOLIO</a></li>
-            <li><a class="scroll" href="#experience">EXPERIENCE</a></li>
-            <li><a class="scroll" href="#contact">CONTACT</a></li>
+            <li><a id="home-nav" class="home active-nav" href="#home"><i class="fas fa-home sideBarIcons"></i><span>Home</span></a></li>
+            <li><a id="about-nav"class="about" href="#about"><i class="far fa-id-badge sideBarIcons"></i><span>About</span></a></li>
+            <li><a id="skills-nav" class="skills" href="#skills"><i class="far fa-file sideBarIcons"></i><span>Skills</span></a></li>
+            <li><a id="education-nav" class="education" href="#education"><i class="fas fa-graduation-cap sideBarIcons"></i><span>Education</span></a></li>
+            <li><a id="portfolio-nav" class="portfolio" href="#portfolio"><i class="fas fa-briefcase sideBarIcons"></i><span>Porfolio</span></a></li>
+            <li><a id="experience-nav" class="experience" href="#experience"><i class="fab fa-black-tie sideBarIcons"></i><span>Experience</span></a></li>
+            <li><a id="contact-nav" class="contact" href="#contact"><i class="fas fa-phone sideBarIcons"></i><span>Contact</span></a></li>
           </ul>
         </div>
         <div class="nav-mobile" >
             <div id="main">
               <span style="font-size:30px; color:white; cursor:pointer" onclick="openNav()">&#9776;</span>
             </div>
-            <div id="flex-one-photo-nav" style="background-image:url('{% static "website/images/intro_cropped.jpg" %}')"></div>
+            <div id="flex-one-photo-nav" style="background-image:url('{% static "website/images/profile_pic.jpg" %}')"></div>
         </div>
       <div class="flex-one">
         <div id="flex-one-photo" style="background-image:url('{% static "website/images/profile_pic.jpg" %}')"></div>
@@ -73,8 +73,11 @@
           <div class="content-holder padding-flex-two">
             <h1>I'm </h1>
             <h3 class="typing">a Full Stack Developer</h3>
-            
             <a class="button" href="#portfolio">View Portfolio<i class="fas fa-briefcase"></i></a>
+            <div class="mobile-contact">
+              <p>mogononso@gmail.com</p>
+              <p>709-769-8522</p>
+            </div>
           </div>
           <div class="contact-in-home">
               <div class="contact-icon-container">
@@ -159,6 +162,8 @@
             <ul>
               <li><i class="fas fa-angle-right"></i>Git/GitHub</li>
               <li><i class="fas fa-angle-right"></i>Windows & Ubuntu</li>
+              <li><i class="fas fa-angle-right"></i>Bash</li>
+              <li><i class="fas fa-angle-right"></i>Powershell</li>
             </ul>
           </div>
           <div class="other-skills">
